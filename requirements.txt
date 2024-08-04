@@ -1,0 +1,7 @@
+Flask
+transformers
+langchain
+faiss-cpu
+langchain-google-genai
+google-cloud
+langchain_community

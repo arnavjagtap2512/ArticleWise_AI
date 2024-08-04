@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AI Text Summarizer</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <i id="home-icon" class="fa-solid fa-home" style="cursor:pointer; font-size: 24px;"></i>
+  <label for="summary-length">Summary Length: <span id="length-value">100</span> words</label><br>
+  <input type="range" id="summary-length" min="50" max="1000" value="100" step="10"><br>
+  <div class="button-wrapper">
+    <button id="summarizeBtn">Summarize</button>
+  </div>
+  <div id="loading"></div> <!-- Loading spinner element -->
+  <div id="summary-container">
+    <div id="summary"></div>
+    <i id="speak-icon" class="fa-solid fa-volume-low" style="display:none; cursor:pointer;"></i>
+    <i id="copy-icon" class="fa-regular fa-copy" style="display:none; cursor:pointer;" title="Copy Summary"></i>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

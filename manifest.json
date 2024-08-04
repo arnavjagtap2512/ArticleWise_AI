@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ArticleWise AI",
+  "version": "1.0",
+  "description": "Simplify reading and get precise answers with our advanced AI summarizer and Q&A bot.",
+  "action": {
+    "default_popup": "home.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
